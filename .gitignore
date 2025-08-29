@@ -1,0 +1,17 @@
+my-plugin/vendor/
+node_modules/
+.DS_Store
+.env
+.env.*.local
+.idea/
+.vscode/
+*.log
+*.sql
+*.zip
+*.tar.gz
+*.phar
+.phpunit.result.cache
+.phpunit-watcher.cache
+.phpunit-watcher-*.log
+.phpunit-watcher-*.cache
+wp-content/advanced-cache.php
