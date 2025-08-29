@@ -13,3 +13,7 @@ Este es un proyecto totalmente vacio listo para poder utilizar preparado para ha
 1. Instalar `npm -g install @wordpress/env` de esta manera instalamos wp-env de forma global en nuestro equipo.
 
 2. Lanzamos el comando `wp-env start` con esto automaticamente npm creará contenedores de docker donde nos proporciona servicios para poder trabajar en un entorno de wordpress.
+
+3. Ingresamos al contenedor de wp-cli y nos dirigimos a la carpeta de nuestro plugin `cd /var/www/html/wp-content/plugins/[my-plugin]`
+
+4. Lanzamos el siguiente comando dentro del contenedor `bin/install-wp-tests.sh tests-wordpress root password [container_name] latest` con este comando se instalan todo lo necesario para que el plugin pueda ejecutar los test.

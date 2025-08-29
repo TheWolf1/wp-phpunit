@@ -5,6 +5,18 @@
  * @package My_Plugin
  */
 
+
+// Cargar Composer autoloader (incluye Polyfills)
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+// Si WordPress aún no encuentra Polyfills, forzamos la constante:
+if ( ! defined( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH' ) ) {
+    define(
+        'WP_TESTS_PHPUNIT_POLYFILLS_PATH',
+        dirname(__DIR__) . '/vendor/yoast/phpunit-polyfills'
+    );
+}
+
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 
 if ( ! $_tests_dir ) {

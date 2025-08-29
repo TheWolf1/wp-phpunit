@@ -14,4 +14,4 @@ node_modules/
 .phpunit-watcher.cache
 .phpunit-watcher-*.log
 .phpunit-watcher-*.cache
-wp-content/advanced-cache.php
+.wp-env-phpunit
