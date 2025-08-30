@@ -23,4 +23,4 @@ En tal caso de que nos de un fallo lanzamos el inicializador de los test con los
 
 1. Ingresamos al contenedor de wp-cli y nos dirigimos a la carpeta de nuestro plugin `cd /var/www/html/wp-content/plugins/[my-plugin]`
 
-2. Lanzamos el siguiente comando dentro del contenedor `bin/install-wp-tests.sh tests-wordpress root password [container_name] latest` con este comando se instalan todo lo necesario para que el plugin pueda ejecutar los test.
+2. Lanzamos el siguiente comando dentro del contenedor `bin/install-wp-tests.sh tests-wordpress root password [container_name] latest` con este comando se instalan todo lo necesario para que el plugin pueda ejecutar los test. Test
