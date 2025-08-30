@@ -14,6 +14,13 @@ Este es un proyecto totalmente vacio listo para poder utilizar preparado para ha
 
 2. Lanzamos el comando `wp-env start` con esto automaticamente npm creará contenedores de docker donde nos proporciona servicios para poder trabajar en un entorno de wordpress.
 
-3. Ingresamos al contenedor de wp-cli y nos dirigimos a la carpeta de nuestro plugin `cd /var/www/html/wp-content/plugins/[my-plugin]`
+3. Instalamos las dependencias del plugin `wp-env run tests-cli --env-cwd=wp-content/plugins/my-plugin composer update -W`
 
-4. Lanzamos el siguiente comando dentro del contenedor `bin/install-wp-tests.sh tests-wordpress root password [container_name] latest` con este comando se instalan todo lo necesario para que el plugin pueda ejecutar los test.
+4. Lanamos los test con el comando `wp-env run tests-cli --env-cwd=wp-content/plugins/my-plugin ./vendor/bin/phpunit`
+
+
+En tal caso de que nos de un fallo lanzamos el inicializador de los test con los siguientes dos pasos.
+
+1. Ingresamos al contenedor de wp-cli y nos dirigimos a la carpeta de nuestro plugin `cd /var/www/html/wp-content/plugins/[my-plugin]`
+
+2. Lanzamos el siguiente comando dentro del contenedor `bin/install-wp-tests.sh tests-wordpress root password [container_name] latest` con este comando se instalan todo lo necesario para que el plugin pueda ejecutar los test.
